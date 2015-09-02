@@ -1,3 +1,5 @@
+[![Build Status](https://semaphoreci.com/api/v1/projects/d8c060db-0163-4ec1-83d2-d8fcb6c328be/529396/badge.svg)](https://semaphoreci.com/brainfarmer/visualistui)
+
 # Visualist UI Applicaiton
 Front end UI for Visualist story mapping
 
