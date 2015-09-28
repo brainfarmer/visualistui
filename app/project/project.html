@@ -1,7 +1,22 @@
-<p>This is the partial for project map</p>
-<p>{{ test }}</p>
-<h5>Epics</h5>
-{{ epics }}
+<md-content>
+  <div layout="row">
+      <div id="epic-container" flex layout-margin layout-padding ng-repeat="epic in epics">
+        <div id="epic" flex class="epic">{{epic.name}}</div>
+        <div id="story-container" layout="column">
+          <div id="story" flex layout-margin layout-padding class="story"
+            ng-repeat="story in stories|filter:epic.label.name">{{story.name}}</div>
+        </div>
+      </div>
+  </div>
+</md-content>
 
-<h5>Stories</h5>
-{{ stories }}
+<p>
+Show raw json <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">
+<hr />
+<div ng-show="checked">
+  <h5>Epics</h5>
+  {{ epics }}
+
+  <h5>Stories</h5>
+  {{ stories }}
+</div>

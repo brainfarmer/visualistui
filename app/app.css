@@ -28,3 +28,20 @@
   content: "";
   padding: 0;
 }
+
+/* Colors */
+.yellow {
+  background: #ffff8d;
+}
+
+.orange {
+  background: #ff9800;
+}
+
+.epic {
+  background: #ff9800;
+}
+
+.story {
+  background: #ffff8d;
+}

@@ -29,6 +29,17 @@ describe('visualistApp.project module', function() {
       httpMock.flush();
     });
 
+    xit('should display epics in a flex-grid', function() {
+    });
+
+    xit('should hyperlink the epic titles', function() {
+    });
+
+    xit('should display the full json in a collapsable element', function() {
+    });
+
+
+
 
   });
 });
