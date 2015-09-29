@@ -1,22 +1,26 @@
-<md-content>
-  <div layout="row">
+<div class="md-padding">
+  <md-map layout="row" class="md-whiteframe-z2">
       <div id="epic-container" flex layout-margin layout-padding ng-repeat="epic in epics">
-        <div id="epic" flex class="epic">{{epic.name}}</div>
+        <div id="epic" flex class="epic md-whiteframe-z2">{{epic.name}}</div>
+        <!-- <md-whiteframe class="md-whiteframe-1dp" flex="25" layout="" layout-align="center center">
+          <span>{{epic.name}}</span>
+        </md-whiteframe> -->
         <div id="story-container" layout="column">
-          <div id="story" flex layout-margin layout-padding class="story"
+          <div id="story" flex layout-margin layout-padding class="story md-whiteframe-z2"
             ng-repeat="story in stories|filter:epic.label.name">{{story.name}}</div>
         </div>
       </div>
   </div>
-</md-content>
+<md-map>
 
-<p>
+<div class="md-padding">
 Show raw json <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">
-<hr />
-<div ng-show="checked">
-  <h5>Epics</h5>
-  {{ epics }}
+  <div ng-show="checked" class="md-padding">
+    <hr />
+    <h5>Epics</h5>
+    {{ epics }}
 
-  <h5>Stories</h5>
-  {{ stories }}
+    <h5>Stories</h5>
+    {{ stories }}
+  </div>
 </div>
