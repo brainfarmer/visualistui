@@ -18,40 +18,39 @@
   <meta name="viewport" content="initial-scale=1" />
 </head>
 <!-- <body layout="column" ng-controller="AppController"> -->
-<body ng-controller="AppController">
-  <md-toolbar layout="row">
-    <div class="md-toolbar-tools">
-      <md-button ng-click="toggleSidenav()" class="md-icon-button">
-        <md-icon md-font-set"fa" title="Show navigation">menu</md-icon>
-      </md-button>
-      <span>Visualist</span>
-      <ul id="site-header-menu">
-        <li><a href="#/project">Story Map</a></li>
-        <li><a href="#/view2">view 2</a></li>
-      </div>
-    </div>
-  </md-toolbar>
+<body ng-app="visualistApp" layout="row">
 
-  <div layout="row" flex>
-    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2"
-      md-component-id="left">
+  <div ng-controller="AppController" layout="column" flex="100">
+
+    <md-toolbar class="md-whiteframe-4dp">
+      <div class="md-toolbar-tools">
+        <md-button ng-click="toggleSidenav()" class="md-icon-button">
+          <md-icon md-font-set"fa" title="Show navigation">menu</md-icon>
+        </md-button>
+        <span>Visualist</span>
+        <span flex></span>
+        <section layout="row" layout-align="right">
+          <md-button href="#/project">Story Map</md-button>
+          <md-button href="#view2">View 2</md-button>
+        </section>
+      </div>
+    </md-toolbar>
+
+    <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-16dp"
+      md-component-id="left" ng-hide>
       <span id="logo">Visualist</span>
       <md-content></md-content>
     </md-sidenav>
 
-    <!-- <div layout="column" flex class="md-padding"> -->
-    <div layout="column" flex>
-      <md-content layout="column" flex id="content">
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div ng-view></div>
-      </md-content>
-    </div>
+    <md-content flex class="md-padding" class="md-primary">
+      <!--[if lt IE 7]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <div ng-view></div>
+    </md-content>
+
+    <footer flex md-padding><span>Visualist app: v<span app-version></span><span></footer>
   </div>
-
-  <!-- <div>Visualist app: v<span app-version></span></div> -->
-
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>

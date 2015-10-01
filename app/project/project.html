@@ -1,17 +1,26 @@
 <div class="md-padding">
   <md-map layout="row" class="md-whiteframe-z2">
-      <div id="epic-container" flex layout-margin layout-padding ng-repeat="epic in epics">
-        <div id="epic" flex class="epic md-whiteframe-z2">{{epic.name}}</div>
-        <!-- <md-whiteframe class="md-whiteframe-1dp" flex="25" layout="" layout-align="center center">
+      <div id="epic-container" flex layout-padding ng-repeat="epic in epics">
+        <div id="epic" flex class="epic md-whiteframe-2dp md-body-2">
           <span>{{epic.name}}</span>
-        </md-whiteframe> -->
-        <div id="story-container" layout="column">
-          <div id="story" flex layout-margin layout-padding class="story md-whiteframe-z2"
-            ng-repeat="story in stories|filter:epic.label.name">{{story.name}}</div>
+        </div>
+        <div style="padding-bottom:4px"></div>
+
+        <div id="story-container" layout="column" ng-repeat="story in stories|filter:epic.label.name">
+          <a href={{story.url}}>
+            <div id="story" flex class="story md-whiteframe-2dp md-body-1">
+              <div class="md-caption" flex>{{story.current_state}}</div>
+              {{story.name}}
+            </div>
+          </a>
+          <!-- <md-card class="md-body-1 md-whiteframe-2dp" ng-repeat="story in stories|filter:epic.label.name">
+            <md-card-content>{{story.name}}</md-card-content>
+            <md-card-footer class="md-caption" layout-align="right right"><span flex>{{story.current_state}}</span></md-card-footer>
+          </md-card> -->
         </div>
       </div>
-  </div>
-<md-map>
+  </md-map>
+</div>
 
 <div class="md-padding">
 Show raw json <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">

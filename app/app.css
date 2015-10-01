@@ -3,6 +3,14 @@
 yellow = #ffff8d
 orange = #ff9800
 gray = #eee
+epic-grey = #ebe9e3
+icebox = #d1e0ed
+unstarted =
+started =
+finished =
+delivered =
+accepted =
+rejected
 */
 
 .menu {
@@ -28,37 +36,32 @@ gray = #eee
   content: "";
   padding: 0;}
 
-#site-header-menu {
-  list-style-type: none;
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-
-#site-header-menu li:first-of-type {
-  margin-left: 9px;
-}
-#site-header-menu li {
-  height: 100%;
-  padding: 16px;
-  display: inline;
-}
 
 .epic {
-  background: #ff9800;}
+  background: #ebe9e3;}
 
 .story {
-  background: #ffff8d;}
+  background: #d1e0ed;}
 
-md-content {
+/*md-content {
   background-color: #eee;
-}
+}*/
 
 md-map {
   background-color: #ffffff;
 }
 
-md-whiteframe {
- background: #fff;
- margin: 30px;
- height: 100px; }
+/* Project specific CSS move to seperate stylsheet */
+#story {
+  background: #d1e0ed;
+  padding: 2px 4px 2px 4px;
+}
+
+#story-container {
+  padding: 2px 0px 2px 0px;
+}
+
+#story-container a, a:visited {
+  text-decoration:  none;
+  color: black;
+}
